@@ -91,6 +91,7 @@ STATIC_URL = '/static/'
 # 開発したモジュール
 INSTALLED_APPS += (
     'tests',
+    'module.bbs',
 )
 
 # テンプレート
