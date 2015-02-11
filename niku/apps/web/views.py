@@ -5,4 +5,7 @@ from ..base.views import BaseView
 
 
 class IndexView(BaseView):
-    pass
+    template_name = "web/index.html"
+
+    def get(self, request, *args, **kwargs):
+        return self.render_to_response({})

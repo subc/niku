@@ -11,8 +11,12 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from .pathutil import abs_parent_path
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+# プロジェクトのルートディレクトリパスを取得
+ROOT_PATH = abs_parent_path(__file__, up_level=1)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -87,4 +91,9 @@ STATIC_URL = '/static/'
 # 開発したモジュール
 INSTALLED_APPS += (
     'tests',
+)
+
+# テンプレート
+TEMPLATE_DIRS = (
+    ROOT_PATH + '/templates/',
 )
