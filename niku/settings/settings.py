@@ -53,9 +53,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'niku.urls'
+ROOT_URLCONF = 'settings.urls'
 
-WSGI_APPLICATION = 'niku.wsgi.application'
+WSGI_APPLICATION = 'wsgi.wsgi.application'
 
 
 # Database
